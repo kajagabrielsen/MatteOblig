@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Parametere
-Lx, Ly, L = 1, 1, 1  # størrelse på griden
-Nx, Ny, N = 50, 50, 50  # gridpunkter
+Lx, Ly = 1, 1  # størrelse på griden
+Nx, Ny = 50, 50  # gridpunkter
 Nt = 100  # tidstep
 dt = 0.0001 
 T = 0.05
@@ -14,7 +14,7 @@ hy = Ly/Ny
 alphax = k / hx**2  # termisk diffusivitet (k/h^2), hvor raskt varmen sprer seg i materialet
 alphay = k / hy**2
 
-# initialbetingelser
+#bestemmer initialbetingelser
 def initialbet(x, y):
     return np.sin(np.pi * x) * np.sin(np.pi * y)
 
